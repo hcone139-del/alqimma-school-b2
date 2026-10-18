@@ -1,58 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta name="google-site-verification" content="qQkUVVKe3HJL2ps02ShA0LUKYOB2-As8eNZRZijH5mk" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>القمة | الصف الأول متوسط B2</title>
+<meta name="theme-color" content="#10264f">
+<title>مدرسة القمة الأهلية | الصف الأول متوسط B2</title>
+<meta name="description" content="بوابة الصف الأول متوسط B2 في مدرسة القمة الأهلية، للتطبيقات والملازم والواجبات والإعلانات.">
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f3ed;color:#18233b;line-height:1.9}
-header{background:linear-gradient(140deg,#101d3a,#263f69);color:#fff;text-align:center;padding:38px 18px 45px;border-bottom:5px solid #d5ae55}
-.logo{width:72px;height:72px;line-height:72px;margin:auto auto 14px;background:#e7bd63;color:#101d3a;border-radius:22px;font-size:35px;font-weight:bold}
-header h1{font-size:27px;margin:0}
-header p{color:#e9e5d8;margin:8px 0}
-main{max-width:780px;margin:24px auto;padding:0 15px}
-.welcome{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 7px 22px #101d3a10;margin-bottom:18px}
-.welcome h2{color:#172b52;margin-top:0}
-.card{background:white;border:1px solid #e6e2d8;border-radius:17px;padding:22px;margin-bottom:18px}
-.card h3{margin-top:0;color:#172b52;font-size:20px}
-.btn{display:block;background:#198754;color:white;text-align:center;text-decoration:none;border-radius:12px;padding:14px;margin-top:15px;font-weight:bold}
-.gold{background:#172b52}
-.small{font-size:13px;color:#69758b}
-footer{text-align:center;padding:24px;color:#69758b}
+:root{--navy:#10264f;--blue:#193c78;--gold:#f2c45e;--paper:#f4f6fb}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--paper);color:#182849;line-height:1.8}
+a{text-decoration:none}
+.hero{background:linear-gradient(145deg,#0b1935,#193c78);color:white;text-align:center;padding:38px 18px 34px;border-bottom:5px solid var(--gold)}
+.logo{width:94px;height:94px;object-fit:contain;border-radius:24px;background:#fff;padding:5px}
+.hero h1{font-size:27px;margin:12px 0 3px}
+.hero p{color:#e1e9f8;margin:4px 0}
+.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff45;border-radius:30px;padding:4px 15px;margin-top:12px;font-size:14px}
+nav{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;padding:12px;background:#fff;box-shadow:0 3px 15px #10264f10}
+nav a{color:var(--navy);font-size:14px;padding:7px 12px;border-radius:20px}
+nav a:hover{background:#edf1fa}
+main{max-width:850px;margin:auto;padding:20px 15px}
+.welcome{background:white;border-radius:22px;padding:22px;text-align:center;box-shadow:0 5px 22px #13274c0c;margin-bottom:18px}
+.welcome h2{margin:0;color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:white;border:1px solid #e6eaf2;border-radius:20px;padding:20px;box-shadow:0 5px 18px #13274c09}
+.card .emoji{font-size:29px}
+.card h3{margin:5px 0 8px;color:var(--navy)}
+.card p{color:#64718a;font-size:14px;margin:5px 0 16px}
+.btn{display:block;text-align:center;background:var(--navy);color:white;padding:12px 15px;border-radius:12px;font-weight:bold}
+.btn.gold{background:var(--gold);color:#182849}
+.btn.green{background:#168455}
+.note{font-size:12px!important;margin-top:10px!important}
+.section-title{text-align:center;margin:28px 0 14px;color:var(--navy)}
+.announcement{background:#fff8e8;border-right:4px solid var(--gold);padding:14px;border-radius:12px;margin-top:12px}
+footer{text-align:center;background:#10264f;color:#dce5f5;padding:22px 15px;margin-top:22px;font-size:13px}
+footer a{color:var(--gold)}
 </style>
 </head>
 <body>
-<header>
-<img src="./logo.png" alt="شعار مدرسة القمة"
-     style="width:100px;height:100px;object-fit:contain;border-radius:18px;">
-<h1>مدرسة القمة الأهلية</h1>
-<p>الصف الأول متوسط B2</p>
-<p>بوابتنا للتطبيقات والملفات الدراسية</p>
+
+<header class="hero">
+  <img class="logo" src="./logo.png" alt="شعار مدرسة القمة"
+       onerror="this.style.display='none'">
+  <h1>مدرسة القمة الأهلية</h1>
+  <p>الصف الأول متوسط B2</p>
+  <p>بوابتنا للتطبيقات والملفات الدراسية</p>
+  <span class="tag">🎓 العلم طريق القمة</span>
 </header>
 
-<main>
-<section class="welcome">
-<h2>أهلاً بطلاب القمة 🎓</h2>
-<p>كل ما تحتاجه لصفك في مكان واحد.</p>
-</section>
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#app">تطبيق الصف</a>
+  <a href="#files">الملازم والواجبات</a>
+  <a href="#news">الإعلانات</a>
+</nav>
 
-<section class="card">
-<h3>📱 تطبيق الصف</h3>
-<p>نزّل تطبيق Android الخاص بالصف الأول متوسط B2.</p>
-<a class="btn" href="./base-1.apk" download>⬇️ تنزيل التطبيق</a>
-<p class="small">إذا أصدرت نسخة جديدة، ارفعها بنفس اسم الملف base-1.apk حتى يبقى رابط التنزيل ثابتاً.</p>
-</section>
+<main id="home">
+  <section class="welcome">
+    <h2>🎓 أهلاً بطلاب القمة</h2>
+    <p>كل ما يحتاجه طالب الصف الأول متوسط B2 في مكان واحد.</p>
+  </section>
 
-<section class="card">
-<h3>📚 الملازم والواجبات</h3>
-<p>ستُضاف الملفات الدراسية والإعلانات هنا عند توفرها.</p>
-</section>
+  <h2 class="section-title">بوابة الصف</h2>
+  <section class="grid">
+    <article class="card" id="app">
+      <div class="emoji">📱</div>
+      <h3>تطبيق الصف</h3>
+      <p>نزّل تطبيق Android الخاص بالصف الأول متوسط B2.</p>
+      <a class="btn green" href="./base-1.apk" download>⬇️ تنزيل التطبيق</a>
+      <p class="note">لرفع تحديث جديد، استخدم اسم الملف نفسه: base-1.apk</p>
+    </article>
 
+    <article class="card" id="files">
+      <div class="emoji">📚</div>
+      <h3>الملازم والواجبات</h3>
+      <p>مكان مخصص للملازم والواجبات والمواد الدراسية.</p>
+      <a class="btn" href="#news">عرض الإعلانات والمواد</a>
+    </article>
+
+    <article class="card" id="news">
+      <div class="emoji">📢</div>
+      <h3>الإعلانات والتنبيهات</h3>
+      <p>تابع آخر أخبار الصف والتنبيهات الدراسية.</p>
+      <div class="announcement">سيتم نشر الإعلانات والواجبات هنا عند توفرها.</div>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🏫</div>
+      <h3>مدرستنا</h3>
+      <p>مدرسة القمة الأهلية، الصف الأول متوسط B2.</p>
+      <a class="btn gold" href="#home">العودة إلى الرئيسية ↑</a>
+    </article>
+  </section>
 </main>
 
-<footer>© 2026 مدرسة القمة الأهلية</footer>
+<footer>
+  <p>مدرسة القمة الأهلية</p>
+  <p>الصف الأول متوسط B2</p>
+  <p>© 2026 بوابة الصف التعليمية</p>
+</footer>
+
 </body>
 </html>
+<meta name="google-site-verification" content="qQkUVVKe3HJL2ps02ShA0LUKYOB2-As8eNZRZijH5mk" />
