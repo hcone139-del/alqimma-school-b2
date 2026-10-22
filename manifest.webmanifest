@@ -1,0 +1,10 @@
+{
+  "name": "ثانوية القمة",
+  "short_name": "القمة",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#101a33"
+}
