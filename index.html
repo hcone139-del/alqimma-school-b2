@@ -1,33 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#172b50">
-<meta name="description" content="بوابة مدرسة القمة الأهلية للصف الأول متوسط B2.">
-<title>مدرسة القمة الأهلية | الصف الأول متوسط B2</title>
-<link rel="icon" href="./logo.png">
-<link rel="apple-touch-icon" href="./logo.png">
-<style>
-:root{--navy:#172b50;--gold:#e5bf62;--paper:#f5f3ec;--ink:#202b3d;--green:#168457}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7}
-.hero{background:linear-gradient(145deg,#132443,#274879);color:white;text-align:center;padding:44px 18px 48px;border-bottom:6px solid var(--gold)}
-.logo{width:112px;height:112px;object-fit:contain;border-radius:24px;box-shadow:0 8px 26px #0002}h1{font-size:clamp(1.7rem,5vw,2.5rem);margin:16px 0 4px}.subtitle{margin:0;font-size:1.12rem;color:#e6edf8}
-main{width:min(920px,calc(100% - 28px));margin:28px auto}.card{background:white;border:1px solid #e7e2d7;border-radius:26px;padding:24px;margin:18px 0;box-shadow:0 10px 28px #182b4610}
-h2{color:var(--navy);margin:0 0 12px;font-size:1.45rem}p{margin:8px 0 16px}.btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;text-align:center;text-decoration:none;border:0;border-radius:16px;padding:15px 18px;min-height:58px;background:var(--green);color:white;font-size:1.08rem;font-weight:750;cursor:pointer}.btn.secondary{background:var(--navy)}.note{color:#697386;font-size:.92rem}.steps{padding-right:22px}.steps li{margin:8px 0}.pill{display:inline-block;background:#eef5ef;color:#176441;padding:3px 10px;border-radius:999px;font-size:.85rem;font-weight:700}footer{text-align:center;color:#667085;padding:12px 16px 32px}[hidden]{display:none!important}
-@media(min-width:650px){.card{padding:30px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101a33">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ثانوية القمة">
+  <meta name="google-site-verification" content="qQkUVVKe3HJL2ps02ShA0LUKYOB2-As8eNZRZijH5mk" />
+  <title>ثانوية القمة</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./logo.png">
+  <style>
+    :root{color-scheme:light;--navy:#101a33;--navy2:#1d3157;--gold:#d8ae50;--cream:#f7f5ef;--ink:#172033}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}
+    header{background:linear-gradient(140deg,var(--navy),var(--navy2));color:white;padding:30px 20px 26px;border-bottom:4px solid var(--gold);border-radius:0 0 26px 26px}
+    .wrap{max-width:760px;margin:auto;padding:0 16px} .brand{display:flex;align-items:center;gap:14px}.logo{width:66px;height:66px;object-fit:contain;background:white;border-radius:17px;padding:5px}
+    h1{font-size:25px;margin:0 0 6px}header p{margin:0;color:#e7eaf1}
+    main{padding:22px 0 40px}.notice{background:#fff;border:1px solid #e6e0d1;border-radius:16px;padding:15px;line-height:1.8;margin-bottom:18px}
+    h2{font-size:19px;margin:22px 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .tile{background:white;border:1px solid #e9e5dc;border-radius:18px;padding:17px 14px;min-height:110px;box-shadow:0 4px 14px #101a330b}
+    .emoji{font-size:27px;display:block;margin-bottom:9px}.tile strong{display:block;font-size:16px}.tile small{color:#667085;display:block;margin-top:5px;line-height:1.5}
+    .download{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;color:white;background:#237a43;border-radius:15px;padding:16px;font-weight:700;margin:10px 0}
+    .download.ios{background:var(--navy)}.download.disabled{background:#7b8190}
+    .muted{font-size:13px;color:#646b78;line-height:1.8}.footer{text-align:center;padding:18px;color:#747b89;font-size:12px}
+    @media(min-width:560px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  </style>
 </head>
 <body>
-<header class="hero">
-<img class="logo" src="./logo.png" alt="شعار مدرسة القمة" onerror="this.style.display='none'">
-<h1>مدرسة القمة الأهلية</h1><p class="subtitle">الصف الأول متوسط B2</p><p class="subtitle">بوابتنا للتطبيقات والملفات الدراسية</p>
-</header>
-<main>
-<section class="card"><h2>🎓 أهلاً بطلاب القمة</h2><p>كل ما تحتاجه لصفّك في مكان واحد.</p><span class="pill">يعمل على Android و iPhone</span></section>
-<section class="card"><h2>📱 تطبيق الصف</h2><p>نزّل تطبيق الصف على جهاز أندرويد.</p><a class="btn" href="./base-1.apk" download>⬇️ تنزيل تطبيق Android (APK)</a><p class="note">عند إصدار نسخة جديدة، استبدل الملف في المستودع مع الحفاظ على الاسم <b>base-1.apk</b>.</p></section>
-<section class="card" id="iphone"><h2>🍎 استخدام الموقع على iPhone</h2><p>افتح بوابة المدرسة من Safari وأضفها إلى الشاشة الرئيسية لتظهر كأيقونة مثل التطبيقات.</p><button class="btn secondary" id="iphoneHelp" type="button">📲 طريقة الإضافة للشاشة الرئيسية</button><div id="iphoneSteps" hidden><ol class="steps"><li>افتح الموقع في متصفح <b>Safari</b> على الآيفون.</li><li>اضغط زر <b>المشاركة</b> (مربع وسهم للأعلى).</li><li>اختر <b>Add to Home Screen / إضافة إلى الشاشة الرئيسية</b>.</li><li>اضغط <b>Add / إضافة</b> وستظهر الأيقونة على الشاشة الرئيسية.</li></ol><p class="note">هذا اختصار للموقع يعمل عبر الإنترنت، وليس تطبيق iOS مستقلًا من App Store أو TestFlight.</p></div></section>
-<section class="card"><h2>📚 الملازم والواجبات</h2><p>سيتم نشر الملازم والواجبات والإعلانات الدراسية هنا عند توفرها.</p></section>
-</main><footer>© 2026 مدرسة القمة الأهلية</footer>
-<script>const b=document.getElementById('iphoneHelp'),s=document.getElementById('iphoneSteps');b.addEventListener('click',()=>{const open=s.hidden;s.hidden=!open;b.textContent=open?'إخفاء طريقة الإضافة':'📲 طريقة الإضافة للشاشة الرئيسية'});</script>
+<header><div class="wrap brand">
+  <img class="logo" src="./logo.png" alt="شعار ثانوية القمة" onerror="this.style.display='none'">
+  <div><h1>ثانوية القمة</h1><p>رفيقك في رحلتك الدراسية</p></div>
+</div></header>
+<main class="wrap">
+  <div class="notice"><strong>أهلاً بكم في تطبيق ثانوية القمة</strong><br>خدمات تعليمية ومساعدة دراسية للطلاب.</div>
+  <h2>الخدمات الدراسية</h2>
+  <div class="grid">
+    <div class="tile"><span class="emoji">💬</span><strong>اسأل وأجب</strong><small>مساعدك الدراسي</small></div>
+    <div class="tile"><span class="emoji">📚</span><strong>الشروحات والتلخيص</strong><small>افهم الدروس بطريقة أسهل</small></div>
+    <div class="tile"><span class="emoji">📝</span><strong>أسئلة الامتحانات</strong><small>تدرّب واستعد للامتحان</small></div>
+    <div class="tile"><span class="emoji">🗓️</span><strong>الجدول الأسبوعي</strong><small>نظّم حصصك الدراسية</small></div>
+  </div>
+  <h2>تنزيل التطبيق</h2>
+  <a class="download" href="./base-1.apk">🤖 تنزيل للأندرويد (APK)</a>
+  <a class="download ios" href="#ios-instructions" onclick="document.getElementById('ios-instructions').hidden=false"> طريقة الآيفون</a>
+  <div id="ios-instructions" class="notice" hidden>
+    <strong>تثبيت على iPhone</strong><br>
+    هذه الصفحة لا تحتوي على ملف iOS مستقل حتى الآن. لا يمكن تثبيت APK على iPhone. للحصول على تطبيق iOS حقيقي، يجب بناء نسخة iOS وتوقيعها وتوزيعها بطريقة تدعمها Apple.
+    <p>لإضافة هذه الصفحة إلى الشاشة الرئيسية: افتحها في Safari، اضغط مشاركة، ثم «إضافة إلى الشاشة الرئيسية».</p>
+  </div>
+  <p class="muted">لإضافة الموقع إلى الشاشة الرئيسية على iPhone: افتحه في Safari ثم اضغط مشاركة ← إضافة إلى الشاشة الرئيسية. هذه نسخة ويب وليست تطبيق iOS مستقلاً.</p>
+</main>
+<div class="footer">ثانوية القمة ©</div>
 </body></html>
