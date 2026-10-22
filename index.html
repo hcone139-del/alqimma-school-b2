@@ -1,188 +1,180 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101d3a">
-  <meta name="description" content="منصة مدرسة القمة الأهلية للصف الأول متوسط B2 للتطبيقات والملفات الدراسية.">
-  <title>مدرسة القمة الأهلية | الأول متوسط B2</title>
-  <style>
-    :root{--navy:#101d3a;--navy2:#172b52;--gold:#e7bd63;--bg:#f4f6fb;--ink:#18233b;--muted:#69758b;--white:#fff;--line:#e4e9f2;--green:#198754}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1120px,92%);margin:auto}
-    header{background:linear-gradient(125deg,var(--navy),#203d70);color:white;position:relative;overflow:hidden}
-    header:before,header:after{content:"";position:absolute;border:1px solid #ffffff1f;border-radius:50%;width:330px;height:330px;pointer-events:none}
-    header:before{left:-110px;top:-180px}header:after{right:42%;bottom:-270px;width:420px;height:420px}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;position:relative;z-index:1}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
-    .brand-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:var(--gold);color:var(--navy);font-size:24px;box-shadow:0 8px 22px #0002}
-    .brand small{display:block;color:#d6deed;font-size:12px;font-weight:500}
-    nav{display:flex;gap:22px;color:#e4eaf5;font-size:14px}
-    nav a:hover{color:var(--gold)}
-    .hero{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:28px;padding:54px 0 68px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #ffffff35;border-radius:99px;color:#f6dfaa;font-size:13px}
-    h1{font-size:clamp(30px,5vw,50px);line-height:1.3;margin:18px 0 12px;letter-spacing:-.7px}
-    .hero p{color:#d7dfef;max-width:620px;margin:0 0 24px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:13px;font-weight:700;border:1px solid transparent;cursor:pointer;font-family:inherit;font-size:14px;transition:.2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-gold{background:var(--gold);color:#14213d;box-shadow:0 7px 18px #0002}
-    .btn-glass{border-color:#ffffff52;color:white;background:#ffffff0c}
-    .hero-card{background:#ffffff12;border:1px solid #ffffff35;border-radius:26px;padding:25px;backdrop-filter:blur(8px);box-shadow:0 20px 50px #0611272b}
-    .app-logo{width:74px;height:74px;display:grid;place-items:center;background:linear-gradient(135deg,#f7d98e,#d7a844);color:#14213d;border-radius:22px;font-size:34px;margin-bottom:16px}
-    .hero-card h3{margin:0 0 5px;font-size:19px}.hero-card p{font-size:13px;margin:0 0 18px}
-    .status{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#e9f0fc}.dot{width:7px;height:7px;border-radius:50%;background:#70d5a3}
-    main{padding:34px 0 60px}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:12px 0 18px}
-    .section-head h2{margin:0;font-size:24px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
-    .pill{background:#e8edf8;color:#32466d;border-radius:99px;padding:6px 11px;font-size:12px;font-weight:700;white-space:nowrap}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 7px 24px #15264c08}
-    .card-top{display:flex;align-items:center;gap:13px;margin-bottom:14px}
-    .tile{width:52px;height:52px;border-radius:16px;background:#edf1fb;display:grid;place-items:center;font-size:25px;flex-shrink:0}
-    .tile.gold{background:#fff4d9}.tile.green{background:#e4f6ed}.tile.purple{background:#f0eaff}
-    .card h3{margin:0;font-size:17px}.card .sub{font-size:12px;color:var(--muted)}
-    .card p{color:var(--muted);font-size:14px;margin:0 0 16px}
-    .btn-navy{background:var(--navy);color:white;width:100%}.btn-outline{background:white;border-color:var(--line);color:var(--navy);width:100%}
-    .notice{display:flex;gap:12px;align-items:flex-start;background:#fff8e8;border:1px solid #f0dfb6;color:#6e5522;border-radius:16px;padding:15px 17px;margin-top:18px;font-size:13px}
-    .notice b{display:block;margin-bottom:2px}
-    .empty{font-size:12px;color:#8a6c2d;margin-top:8px}
-    .file-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
-    .file-row:last-child{border-bottom:0}.file-left{display:flex;align-items:center;gap:12px}.file-left strong{display:block;font-size:14px}.file-left small{color:var(--muted)}
-    .mini-icon{width:42px;height:42px;display:grid;place-items:center;background:#f0f3f9;border-radius:12px}
-    .announcement{background:linear-gradient(120deg,#fff,#f0f4fc);border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;gap:14px;align-items:flex-start}
-    .announcement p{margin:4px 0 0;color:var(--muted);font-size:14px}
-    footer{background:var(--navy);color:#dce4f3;padding:26px 0;font-size:13px}
-    .footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}
-    footer strong{color:white}
-    .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#152544;color:white;padding:12px 18px;border-radius:12px;box-shadow:0 10px 35px #0003;display:none;z-index:10;font-size:14px;max-width:90%;text-align:center}
-    @media(max-width:760px){nav{gap:12px;font-size:12px}.hero{grid-template-columns:1fr;padding:38px 0 45px}.hero-card{max-width:440px}.grid{grid-template-columns:1fr}.section-head{align-items:start}.nav{align-items:flex-start}.brand{font-size:14px}.brand-icon{width:40px;height:40px}.hide-mobile{display:none}}
-    @media(min-width:540px) and (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10264f">
+<meta name="theme-color" content="#08152e">
+<meta name="google-site-verification" content="qQkUVVKe3HJL2ps02ShA0LUKYOB2-As8eNZRZijH5mk" />
+<title>مدرسة القمة الأهلية | الصف الأول متوسط B2</title>
+<meta name="description" content="بوابة الصف الأول متوسط B2 في مدرسة القمة الأهلية، للتطبيقات والملازم والواجبات والإعلانات.">
+<meta name="description" content="بوابة الصف الأول متوسط B2 في مدرسة القمة الأهلية، للتطبيقات والملفات الدراسية والإعلانات.">
+<style>
+*{box-sizing:border-box}
+:root{--navy:#10264f;--blue:#193c78;--gold:#f2c45e;--paper:#f4f6fb}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--paper);color:#182849;line-height:1.8}
+a{text-decoration:none}
+.hero{background:linear-gradient(145deg,#0b1935,#193c78);color:white;text-align:center;padding:38px 18px 34px;border-bottom:5px solid var(--gold)}
+.logo{width:94px;height:94px;object-fit:contain;border-radius:24px;background:#fff;padding:5px}
+.hero h1{font-size:27px;margin:12px 0 3px}
+.hero p{color:#e1e9f8;margin:4px 0}
+.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff45;border-radius:30px;padding:4px 15px;margin-top:12px;font-size:14px}
+nav{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;padding:12px;background:#fff;box-shadow:0 3px 15px #10264f10}
+nav a{color:var(--navy);font-size:14px;padding:7px 12px;border-radius:20px}
+nav a:hover{background:#edf1fa}
+main{max-width:850px;margin:auto;padding:20px 15px}
+.welcome{background:white;border-radius:22px;padding:22px;text-align:center;box-shadow:0 5px 22px #13274c0c;margin-bottom:18px}
+.welcome h2{margin:0;color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:white;border:1px solid #e6eaf2;border-radius:20px;padding:20px;box-shadow:0 5px 18px #13274c09}
+.card .emoji{font-size:29px}
+.card h3{margin:5px 0 8px;color:var(--navy)}
+.card p{color:#64718a;font-size:14px;margin:5px 0 16px}
+.btn{display:block;text-align:center;background:var(--navy);color:white;padding:12px 15px;border-radius:12px;font-weight:bold}
+.btn.gold{background:var(--gold);color:#182849}
+.btn.green{background:#168455}
+.note{font-size:12px!important;margin-top:10px!important}
+.section-title{text-align:center;margin:28px 0 14px;color:var(--navy)}
+.announcement{background:#fff8e8;border-right:4px solid var(--gold);padding:14px;border-radius:12px;margin-top:12px}
+footer{text-align:center;background:#10264f;color:#dce5f5;padding:22px 15px;margin-top:22px;font-size:13px}
+footer a{color:var(--gold)}
+:root{--gold:#f6cf75;--navy:#08152e;--muted:#aebbd3}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;color:#fff;background:#08152e;line-height:1.8}
+a{text-decoration:none;color:inherit}
+.hero{position:relative;overflow:hidden;text-align:center;padding:38px 20px 45px;background:radial-gradient(ellipse at top,#244b83 0%,#10274d 48%,#08152e 100%);border-bottom:2px solid var(--gold)}
+.logo{width:105px;height:105px;object-fit:contain;background:white;border:3px solid var(--gold);border-radius:28px;padding:5px;box-shadow:0 0 35px #f6cf7530}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:2px;margin-top:12px}
+h1{font-size:clamp(27px,7vw,42px);line-height:1.4;margin:4px 0}
+.hero p{margin:5px 0;color:#d6e0f1}
+.pill{display:inline-block;margin-top:15px;border:1px solid #f6cf7566;color:var(--gold);background:#f6cf7510;padding:5px 16px;border-radius:30px;font-size:13px}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:10px;background:#08152eef;border-bottom:1px solid #ffffff12}
+nav a{font-size:12px;padding:7px 11px;color:#dce6f8;border-radius:20px}
+nav a:hover{background:#ffffff12;color:var(--gold)}
+main{max-width:900px;margin:auto;padding:22px 15px}
+.welcome{padding:24px 20px;border-radius:25px;background:linear-gradient(135deg,#183968,#102448);border:1px solid #ffffff16;text-align:center;box-shadow:0 15px 40px #0002}
+.welcome .star{font-size:30px}
+.welcome h2{margin:0;color:var(--gold);font-size:23px}
+.welcome p{margin:7px 0 0;color:#d1dced;font-size:14px}
+.section-heading{display:flex;align-items:center;gap:10px;margin:30px 3px 14px;font-size:20px}
+.section-heading:after{content:"";height:1px;flex:1;background:linear-gradient(to left,#f6cf7566,transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:14px}
+.card{background:linear-gradient(145deg,#142b50,#0e203e);border:1px solid #ffffff13;border-radius:22px;padding:21px;transition:transform .2s}
+.card:hover{transform:translateY(-3px);border-color:#f6cf7566}
+.iconbox{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:#f6cf7515;border:1px solid #f6cf7533;font-size:27px}
+.card h3{margin:12px 0 3px;font-size:18px}
+.card p{font-size:13px;color:var(--muted);margin:4px 0 17px}
+.btn{display:block;text-align:center;padding:12px 14px;border-radius:13px;background:linear-gradient(135deg,#ffe3a0,#e6b64d);color:#17233c;font-weight:bold;font-size:14px}
+.btn.blue{background:#203e6b;color:#fff;border:1px solid #ffffff1a}
+.btn.green{background:linear-gradient(135deg,#4ed5a0,#169c72);color:#062e26}
+.small{font-size:11px!important;margin:10px 0 0!important}
+.notice{padding:15px;border-radius:15px;background:#f6cf7510;border:1px solid #f6cf7530;color:#e9d7ad;font-size:13px}
+footer{margin-top:30px;text-align:center;padding:25px 15px;background:#060f21;border-top:1px solid #f6cf7530;color:#aebbd3;font-size:12px}
+footer strong{color:var(--gold)}
+</style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="#home" aria-label="الرئيسية">
-        <span class="brand-icon">⌂</span>
-        <span>مدرسة القمة الأهلية<small>الصف الأول متوسط B2</small></span>
-      </a>
-      <nav>
-        <a href="#apps">التطبيقات</a>
-        <a href="#files">الملفات</a>
-        <a href="#news">الإعلانات</a>
-      </nav>
-    </div>
-    <section class="hero" id="home">
-      <div>
-        <span class="eyebrow">✦ منصّة الصف الدراسية</span>
-        <h1>كل ما تحتاجه<br>لرحلتك الدراسية في مكان واحد</h1>
-        <p>أهلاً بطلاب الصف الأول متوسط B2. هنا تجدون التطبيقات والملفات الدراسية والإعلانات المهمة، بواجهة سهلة من الموبايل.</p>
-        <div class="actions">
-          <a class="btn btn-gold" href="#apps">استكشف التطبيقات <span>←</span></a>
-          <a class="btn btn-glass" href="#files">الملفات الدراسية</a>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <div class="app-logo">▣</div>
-        <h3>تطبيق الصف B2</h3>
-        <p>مكان واحد للوصول إلى تطبيقات وموارد الصف.</p>
-        <div class="status"><span class="dot"></span> المنصة جاهزة للتخصيص</div>
-      </aside>
-    </section>
-  </div>
+<header class="hero">
+  <img class="logo" src="./logo.png" alt="شعار مدرسة القمة"
+       onerror="this.style.display='none'">
+  <h1>مدرسة القمة الأهلية</h1>
+  <p>الصف الأول متوسط B2</p>
+  <p>بوابتنا للتطبيقات والملفات الدراسية</p>
+  <span class="tag">🎓 العلم طريق القمة</span>
+<img class="logo" src="./logo.png" alt="شعار مدرسة القمة" onerror="this.style.display='none'">
+<div class="eyebrow">بوابتنا التعليمية</div>
+<h1>مدرسة القمة الأهلية</h1>
+<p>الصف الأول متوسط <strong style="color:#f6cf75">B2</strong></p>
+<p>كل ما يحتاجه طالبنا في مكان واحد</p>
+<span class="pill">✦ نحو التميّز والنجاح ✦</span>
 </header>
-
-<main class="wrap">
-  <section id="apps">
-    <div class="section-head">
-      <div><h2>التطبيقات</h2><p>نزّل التطبيقات التي تحتاجها للدراسة.</p></div>
-      <span class="pill">متجر الصف</span>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <div class="card-top">
-          <div class="tile gold">▣</div>
-          <div><h3>تطبيق الصف الأول B2</h3><span class="sub">ملف Android APK</span></div>
-        </div>
-        <p>اضغط على زر التحميل بعد ربطه بملف التطبيق الخاص بك.</p>
-        <a class="btn btn-navy" href="#" id="apkButton">↓ تحميل التطبيق APK</a>
-        <div class="empty" id="apkStatus">لم يُربط ملف التطبيق بعد.</div>
-      </article>
-      <article class="card">
-        <div class="card-top">
-          <div class="tile green">✓</div>
-          <div><h3>موارد الصف</h3><span class="sub">مواد مساعدة</span></div>
-        </div>
-        <p>يمكنك إضافة روابط للمواقع التعليمية أو الموارد التي يعتمدها المدرّسون.</p>
-        <a class="btn btn-outline" href="#files">عرض الملفات الدراسية</a>
-      </article>
-      <article class="card">
-        <div class="card-top">
-          <div class="tile purple">✦</div>
-          <div><h3>تحديثات المنصة</h3><span class="sub">إصدارات وروابط جديدة</span></div>
-        </div>
-        <p>ارجع إلى هذه الصفحة عند إضافة تطبيق جديد أو تحديث ملف موجود.</p>
-        <a class="btn btn-outline" href="#news">عرض الإعلانات</a>
-      </article>
-    </div>
-    <div class="notice"><span>ⓘ</span><div><b>ملاحظة مهمة</b>زر APK يحتاج رابط ملفك الحقيقي حتى يعمل. لا ترفع تطبيقات لا تملكها أو لا تملك إذناً بتوزيعها، وافحص الملف قبل مشاركته.</div></div>
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#app">تطبيق الصف</a>
+  <a href="#files">الملازم والواجبات</a>
+  <a href="#news">الإعلانات</a>
+<a href="#home">الرئيسية</a>
+<a href="#app">تطبيق الصف</a>
+<a href="#study">الملازم والواجبات</a>
+<a href="#news">الإعلانات</a>
+</nav>
+<main id="home">
+  <section class="welcome">
+    <h2>🎓 أهلاً بطلاب القمة</h2>
+    <p>كل ما يحتاجه طالب الصف الأول متوسط B2 في مكان واحد.</p>
   </section>
-
-  <section id="files" style="margin-top:38px">
-    <div class="section-head"><div><h2>الملفات الدراسية</h2><p>مساحة جاهزة لإضافة الملازم والواجبات.</p></div></div>
-    <div class="card">
-      <div class="file-row">
-        <div class="file-left"><div class="mini-icon">📘</div><div><strong>ملازم الصف</strong><small>أضف رابط الملف عند توفره</small></div></div>
-        <span class="pill">قريباً</span>
-      </div>
-      <div class="file-row">
-        <div class="file-left"><div class="mini-icon">📝</div><div><strong>الواجبات والملخصات</strong><small>روابط دراسية للطلاب</small></div></div>
-        <span class="pill">قريباً</span>
-      </div>
-    </div>
+  <h2 class="section-title">بوابة الصف</h2>
+  <section class="grid">
+    <article class="card" id="app">
+      <div class="emoji">📱</div>
+      <h3>تطبيق الصف</h3>
+      <p>نزّل تطبيق Android الخاص بالصف الأول متوسط B2.</p>
+      <a class="btn green" href="./base-1.apk" download>⬇️ تنزيل التطبيق</a>
+      <p class="note">لرفع تحديث جديد، استخدم اسم الملف نفسه: base-1.apk</p>
+    </article>
+    <article class="card" id="files">
+      <div class="emoji">📚</div>
+      <h3>الملازم والواجبات</h3>
+      <p>مكان مخصص للملازم والواجبات والمواد الدراسية.</p>
+      <a class="btn" href="#news">عرض الإعلانات والمواد</a>
+    </article>
+    <article class="card" id="news">
+      <div class="emoji">📢</div>
+      <h3>الإعلانات والتنبيهات</h3>
+      <p>تابع آخر أخبار الصف والتنبيهات الدراسية.</p>
+      <div class="announcement">سيتم نشر الإعلانات والواجبات هنا عند توفرها.</div>
+    </article>
+    <article class="card">
+      <div class="emoji">🏫</div>
+      <h3>مدرستنا</h3>
+      <p>مدرسة القمة الأهلية، الصف الأول متوسط B2.</p>
+      <a class="btn gold" href="#home">العودة إلى الرئيسية ↑</a>
+    </article>
   </section>
-
-  <section id="news" style="margin-top:38px">
-    <div class="section-head"><div><h2>الإعلانات المدرسية</h2><p>تنبيهات وملاحظات للطلاب.</p></div></div>
-    <div class="announcement">
-      <div class="tile gold">📣</div>
-      <div><strong>أهلاً بكم في منصة الصف B2</strong><p>هذه واجهة أولية جاهزة للنشر. أضف الإعلانات وروابط التطبيقات والملفات عند الحاجة.</p></div>
-    </div>
-  </section>
+<section class="welcome">
+<div class="star">🎓</div>
+<h2>أهلاً بأبطال القمة</h2>
+<p>مساحتكم الخاصة للتطبيقات والمواد الدراسية وأخبار الصف.</p>
+</section>
+<h2 class="section-heading">خدمات الصف</h2>
+<section class="grid">
+<article class="card" id="app">
+<div class="iconbox">📱</div>
+<h3>تطبيق الصف</h3>
+<p>حمّل تطبيق Android الخاص بالصف الأول متوسط B2.</p>
+<a class="btn green" href="./base-1.apk" download>⬇ تنزيل التطبيق</a>
+<p class="small">تأكد من رفع النسخة الحديثة باسم base-1.apk</p>
+</article>
+<article class="card" id="study">
+<div class="iconbox">📚</div>
+<h3>الملازم والواجبات</h3>
+<p>مكان مخصص للمواد والملازم والواجبات المدرسية.</p>
+<a class="btn blue" href="#news">عرض محتوى الصف</a>
+</article>
+<article class="card" id="news">
+<div class="iconbox">📢</div>
+<h3>إعلانات الصف</h3>
+<p>تابع التنبيهات والأخبار والمواعيد الدراسية.</p>
+<div class="notice">ستظهر الإعلانات الجديدة هنا عند إضافتها.</div>
+</article>
+<article class="card">
+<div class="iconbox">🏆</div>
+<h3>طموحنا القمة</h3>
+<p>بالعلم والاجتهاد نصنع مستقبلاً أجمل.</p>
+<a class="btn blue" href="#home">العودة للأعلى ↑</a>
+</article>
+</section>
 </main>
-
 <footer>
-  <div class="wrap footer-inner">
-    <div><strong>مدرسة القمة الأهلية</strong><br>الصف الأول متوسط B2</div>
-    <div>منصة طلابية مستقلة — أضف روابطك الرسمية قبل المشاركة.</div>
-  </div>
+  <p>مدرسة القمة الأهلية</p>
+  <p>الصف الأول متوسط B2</p>
+  <p>© 2026 بوابة الصف التعليمية</p>
+<strong>مدرسة القمة الأهلية</strong>
+<div>الصف الأول متوسط B2</div>
+<div>© 2026 بوابة القمة التعليمية</div>
 </footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script>
-  // بعد رفع ملف APK، ضع رابط التحميل الحقيقي بين علامتي الاقتباس أدناه.
-  // مثال: const APK_URL = "https://example.com/my-app.apk";
-  const APK_URL = "";
-  const button = document.getElementById("apkButton");
-  const status = document.getElementById("apkStatus");
-  const toast = document.getElementById("toast");
-  if (APK_URL.trim()) {
-    button.href = APK_URL;
-    button.target = "_blank";
-    button.rel = "noopener";
-    status.textContent = "رابط التحميل مرتبط.";
-  } else {
-    button.addEventListener("click", function(event) {
-      event.preventDefault();
-      toast.textContent = "زر التحميل جاهز، لكن يجب إضافة رابط ملف APK أولاً.";
-      toast.style.display = "block";
-      setTimeout(() => toast.style.display = "none", 3500);
-    });
-  }
-</script>
 </body>
 </html>
+<meta name="google-site-verification" content="qQkUVVKe3HJL2ps02ShA0LUKYOB2-As8eNZRZijH5mk" />
+                     
